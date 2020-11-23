@@ -109,7 +109,6 @@ h3.box-tit {
   position: relative;
 }
 .top-area .img-box img {
-  padding-top: 113px;
   width: 800px;
 }
 .top-area p {
@@ -572,20 +571,20 @@ h3.box-tit {
     margin-top: 80px;
   }
   .motive-box {
-    margin-top: 50px;
+    padding-top: 50px;
   }
   .process-box {
-    margin-top: 100px;
+    padding-top: 100px;
   }
-  .process-box > ul > li::after {
+  .process-box > ul.deplist > li::after {
     height: 110px;
   }
-  .process-box > ul > li div.text-sec {
+  .process-box > ul.deplist > li div.text-sec {
     min-height: 100px;
     padding: 20px 0 20px 60px;
   }
 
-  .process-box > ul > li div.text-sec ul li {
+  .process-box > ul.deplist > li div.text-sec ul li {
     margin-bottom: 30px;
   }
   .analysis .sec-09 p,
@@ -609,6 +608,17 @@ h3.box-tit {
   .analysis .sec-02 .chart-sec {
     margin-bottom: 80px;
   }
+  .process-box .process-ul li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .process-box .process-ul li:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .sec-03 img,
+  .sec-04 img {
+    width: 100%;
+  }
 }
 @media (max-width: 999px) {
   .wrap {
@@ -618,19 +628,19 @@ h3.box-tit {
   .motive-box .right-area {
     width: 100%;
   }
-  .process-box > ul > li::after {
+  .process-box > ul.deplist > li::after {
     display: none;
   }
-  .process-box > ul > li div.text-sec {
+  .process-box > ul.deplist > li div.text-sec {
     font-size: 12px;
     padding: 10px 0 20px;
   }
-  .process-box > ul > li div.text-sec > p {
+  .process-box > ul.deplist > li div.text-sec > p {
     margin: 0;
     display: block;
     margin-top: 10px;
   }
-  .process-box > ul > li div.text-sec ul li {
+  .process-box > ul.deplist > li div.text-sec ul li {
     margin-bottom: 20px;
   }
   .analysis {
@@ -646,6 +656,9 @@ h3.box-tit {
   }
   .analysis .sec-05 .text-sec {
     min-width: 100%;
+  }
+  .process-box p.info {
+    margin: 50px 0;
   }
 }
 
@@ -679,16 +692,16 @@ h3.box-tit {
   .process-box {
     margin-top: 50px;
   }
-  .process-box > ul > li::before {
+  .process-box > ul.deplist > li::before {
     top: 13px;
   }
-  .process-box > ul > li div.text-sec {
+  .process-box > ul.deplist > li div.text-sec {
     padding-left: 0;
   }
-  .process-box > ul > li div.text-sec ul li p {
+  .process-box > ul.deplist > li div.text-sec ul li p {
     padding-left: 170px;
   }
-  .process-box > ul > li div.text-sec {
+  .process-box > ul.deplist > li div.text-sec {
     min-height: auto;
   }
   .analysis {
@@ -754,10 +767,10 @@ h3.box-tit {
   .motive-box .left-area img {
     width: 100%;
   }
-  .process-box > ul > li div.text-sec ul li span {
+  .process-box > ul.deplist > li div.text-sec ul li span {
     position: static;
   }
-  .process-box > ul > li div.text-sec ul li p {
+  .process-box > ul.deplist > li div.text-sec ul li p {
     padding-left: 0;
     font-size: 1.5em;
   }
@@ -783,13 +796,13 @@ h3.box-tit {
   .process-box ul li p.list-tit {
     font-size: 1.825em;
   }
-  .process-box > ul > li div.text-sec div p,
-  .process-box > ul > li div.text-sec > span,
-  .process-box > ul > li div.text-sec ul li span,
-  .process-box > ul > li div.text-sec ul li p {
+  .process-box > ul.deplist > li div.text-sec div p,
+  .process-box > ul.deplist > li div.text-sec > span,
+  .process-box > ul.deplist > li div.text-sec ul li span,
+  .process-box > ul.deplist > li div.text-sec ul li p {
     font-size: 1.5em;
   }
-  .process-box > ul > li div.text-sec ul li p {
+  .process-box > ul.deplist > li div.text-sec ul li p {
     font-size: 1.25em;
   }
 }

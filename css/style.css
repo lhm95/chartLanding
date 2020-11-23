@@ -540,6 +540,7 @@ h3.box-tit {
     left: 0vw;
   }
   .gnb p {
+    display: block;
     position: absolute;
     top: 20px;
     right: 20px;

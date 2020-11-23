@@ -269,3 +269,13 @@ var chart = new Chart(secChart10, {
       })
   });
 }(window, window.jQuery));
+
+$(function(){
+  $(".gnb_btn").click(function(){
+    $(".gnb").addClass("on");
+  })
+  $(".gnb p").click(function(){
+    $(".gnb").removeClass("on");
+  })
+
+});

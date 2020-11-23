@@ -63,7 +63,7 @@ h3.box-tit {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   background: #212529;
 }
@@ -507,6 +507,10 @@ h3.box-tit {
   line-height: 50px;
 }
 
+.gnb_btn {
+  display: none;
+}
+
 @media (max-width: 1140px) {
   .wrap {
     width: 100%;
@@ -516,6 +520,46 @@ h3.box-tit {
     width: 100%;
     padding: 50px 30px;
   }
+  .gnb_btn {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .gnb {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: -100vw;
+    transition: all 0.3s;
+  }
+  .gnb.on {
+    left: 0vw;
+  }
+  .gnb p {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+  }
+  .gnb ul {
+    width: 100%;
+  }
+  .gnb ul li {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .gnb ul li {
+    font-size: 1.5em;
+  }
+  .top-area {
+    padding: 0;
+  }
+
   .motive-box .left-area {
     position: static;
     padding: 0;

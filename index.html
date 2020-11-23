@@ -5,18 +5,30 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="top-area">
+    <div class="gnb">
+        <div class="floating-menu">
+            <ul>
+                <li class="m"><a href=".top-area" class="menu-01"><span>INTRO</span></a></li>
+                <li class="m"><a href="#section-02" class="menu-02"><span>MOTIVE & PURPOSE</span></a></li>
+                <li class="m"><a href="#section-03" class="menu-03"><span>PROCESS & RESULT</span></a></li>
+                <li class="m"><a href="#section-04" class="menu-04"><span>ANALYSIS</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="top-area scroll">
         <div class="img-box">
             <img src="images/mainimg@2x.png" alt="">
         </div>
         <p><span>매일 소식을 전달하는 뉴스</span>여성은 그 안에 어떻게 자리잡고 있을까</p>
     </div>
-    <div class="wrap">
-        <div class="motive-box">
+    <div class="wrap scroll">
+        <div class="motive-box ">
             <div class="left-area">
                 <img src="images/지나@2x.png" alt="">
                 <p>미국의 배우이자<br />미디어양성평등연구소를 운영 중인</p>
@@ -34,9 +46,9 @@
                     목표입니다. </p>
             </div>
         </div>
-        <div class="process-box">
+        <div class="process-box scroll">
             <h3 class="box-tit">PROCESS & RESULT</h3>
-            <ul>
+            <ul class="deplist">
                 <li>
                     <p class="list-tit">
                         데이터 수집
@@ -82,11 +94,25 @@
 
                 </li>
             </ul>
+            <p class="info">ELECTRA : Pre-training Text Encoders as Discriminators Rather Than Genera<br />(Clark et
+                al , 2020)</p>
+            <ul class="process-ul">
+                <li>
+                    <p>sentiment model</p>
+                    <p>정확도</p>
+                    <p>00%</p>
+                </li>
+                <li>
+                    <p>category model</p>
+                    <p>정확도</p>
+                    <p>00%</p>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="analysis">
+    <div class="analysis scroll">
         <h3 class="box-tit">ANALYSIS</h3>
-        <div class="sec-01">
+        <!-- <div class="sec-01">
             <div class="wrap">
                 <div class="tit-sec">
                     <p>여성과 남성 중, 기사에 더 자주 언급되는 성별은?</p>
@@ -94,7 +120,7 @@
                 </div>
                 <canvas id="sec-01-chart"></canvas>
             </div>
-        </div>
+        </div> -->
         <div class="sec-02">
             <div class="wrap">
                 <div class="tit-sec">
@@ -113,13 +139,15 @@
         <div class="sec-03">
             <div class="wrap">
                 <h5>여성 언급 뉴스 워드 클라우드</h5>
-                <canvas id="sec-03-chart"></canvas>
+                <img src="https://via.placeholder.com/1140x500" alt="">
+                <!-- <canvas id="sec-03-chart"></canvas> -->
             </div>
         </div>
         <div class="sec-04">
             <div class="wrap">
                 <h5>남성 언급 뉴스 워드 클라우드</h5>
-                <canvas id="sec-04-chart"></canvas>
+                <img src="https://via.placeholder.com/1140x500" alt="">
+                <!-- <canvas id="sec-04-chart"></canvas> -->
             </div>
         </div>
         <div class="sec-05">

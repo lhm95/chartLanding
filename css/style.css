@@ -59,6 +59,35 @@ h3.box-tit {
   margin-bottom: 63px;
 }
 
+.gnb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: #212529;
+}
+.gnb ul {
+  overflow: hidden;
+  width: 1140px;
+  margin: 0 auto;
+}
+.gnb ul li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+}
+.gnb ul li a span {
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.gnb ul li.m.on a span {
+  color: #f0c95b;
+}
+
 .wrap {
   width: 1140px;
   margin: 0 auto;
@@ -69,6 +98,7 @@ h3.box-tit {
   width: 100%;
   background: #fffaee;
   position: relative;
+  padding-top: 50px;
 }
 
 .top-area .img-box {
@@ -79,7 +109,7 @@ h3.box-tit {
   position: relative;
 }
 .top-area .img-box img {
-  margin-top: 113px;
+  padding-top: 113px;
   width: 800px;
 }
 .top-area p {
@@ -95,7 +125,7 @@ h3.box-tit {
 }
 
 .motive-box {
-  margin-top: 204px;
+  padding-top: 204px;
   position: relative;
 }
 .motive-box .left-area {
@@ -138,15 +168,15 @@ h3.box-tit {
 }
 
 .process-box {
-  margin-top: 225px;
+  padding-top: 225px;
 }
-.process-box > ul {
+.process-box > ul.deplist {
 }
-.process-box > ul > li {
+.process-box > ul.deplist > li {
   padding-left: 35px;
   position: relative;
 }
-.process-box > ul > li::before {
+.process-box > ul.deplist > li::before {
   content: "";
   display: block;
   width: 13px;
@@ -158,7 +188,7 @@ h3.box-tit {
   top: 19px;
   z-index: 1;
 }
-.process-box > ul > li::after {
+.process-box > ul.deplist > li::after {
   content: "";
   display: block;
   width: 1px;
@@ -168,68 +198,85 @@ h3.box-tit {
   top: 50px;
   border-left: 1px dashed #b9b9b9;
 }
-.process-box > ul > li:last-child::after {
+.process-box > ul.deplist > li:last-child::after {
   display: none;
 }
 .process-box ul li p.list-tit {
   font-size: 2.125em;
   font-weight: 500;
 }
-.process-box > ul > li div.text-sec {
+.process-box > ul.deplist > li div.text-sec {
   padding: 62px 0 0 107px;
   min-height: 231px;
 }
 
 /* 데이터 수집 */
-.process-box > ul > li div.text-sec div {
+.process-box > ul.deplist > li div.text-sec div {
   display: inline-block;
 }
-.process-box > ul > li div.text-sec div p {
+.process-box > ul.deplist > li div.text-sec div p {
   font-size: 1.75em;
 }
-.process-box > ul > li div.text-sec div span {
+.process-box > ul.deplist > li div.text-sec div span {
   font-size: 1.25em;
   font-weight: 300;
 }
-.process-box > ul > li div.text-sec > p {
+.process-box > ul.deplist > li div.text-sec > p {
   display: inline-block;
   vertical-align: top;
   margin-left: 72px;
 }
-.process-box > ul > li div.text-sec > p em {
+.process-box > ul.deplist > li div.text-sec > p em {
   font-size: 2.813em;
   font-weight: 600;
 }
 
 /* 데이터 전처리 */
-.process-box > ul > li div.text-sec > span {
+.process-box > ul.deplist > li div.text-sec > span {
   font-size: 1.75em;
 }
 
 /* 데이터 모델링 */
-.process-box > ul > li div.text-sec ul {
+.process-box > ul.deplist > li div.text-sec ul {
 }
-.process-box > ul > li div.text-sec ul li {
+.process-box > ul.deplist > li div.text-sec ul li {
   position: relative;
   min-height: 42px;
   margin-bottom: 55px;
 }
-.process-box > ul > li div.text-sec ul li:last-child {
+.process-box > ul.deplist > li div.text-sec ul li:last-child {
   margin-bottom: 0;
 }
-.process-box > ul > li div.text-sec ul li span,
-.process-box > ul > li div.text-sec ul li p {
+.process-box > ul.deplist > li div.text-sec ul li span,
+.process-box > ul.deplist > li div.text-sec ul li p {
   font-size: 1.75em;
   font-weight: 400;
 }
-.process-box > ul > li div.text-sec ul li span {
+.process-box > ul.deplist > li div.text-sec ul li span {
   position: absolute;
 }
-.process-box > ul > li div.text-sec ul li p {
+.process-box > ul.deplist > li div.text-sec ul li p {
   padding-left: 220px;
   padding-top: 3px;
   line-height: 34px;
   font-weight: 300;
+}
+.process-box p.info {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-size: 1.25em;
+  line-height: 2;
+}
+.process-box .process-ul {
+  text-align: center;
+}
+.process-box .process-ul li {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  font-size: 1.25em;
+  line-height: 1, 8;
 }
 
 /* analysis */

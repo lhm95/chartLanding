@@ -5,7 +5,7 @@
 //         labels: ['여성', '남성'],
 //         datasets: [{
 //             label: 'My First dataset',
-//             backgroundColor: ['rgb(237, 125, 49)', "rgb(0, 85, 255)"],
+//             backgroundColor: ['rgb(53, 155, 189)', "rgb(246, 197, 45)"],
 //             data: [3, 10]
 //         }]
 //     },
@@ -20,7 +20,7 @@ var chart = new Chart(secChart0201, {
         labels: ['긍정', '부정'],
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: ['rgb(237, 125, 49)', "rgb(0, 85, 255)"],
+            backgroundColor: ["rgb(246, 197, 45)",'rgb(53, 155, 189)'],
             data: [3, 10]
         }]
     },
@@ -35,7 +35,7 @@ var chart = new Chart(secChart0202, {
         labels: ['긍정', '부정'],
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: ['rgb(237, 125, 49)', "rgb(0, 85, 255)"],
+            backgroundColor: [ "rgb(246, 197, 45)",'rgb(53, 155, 189)'],
             data: [3, 10]
         }]
     },
@@ -49,7 +49,7 @@ var chart = new Chart(secChart0202, {
 //         labels: ['여성', '남성'],
 //         datasets: [{
 //             label: 'My First dataset',
-//             backgroundColor: ['rgb(237, 125, 49)', "rgb(0, 85, 255)"],
+//             backgroundColor: ['rgb(53, 155, 189)', "rgb(246, 197, 45)"],
 //             data: [3, 10]
 //         }]
 //     },
@@ -63,47 +63,103 @@ var chart = new Chart(secChart0202, {
 //         labels: ['여성', '남성'],
 //         datasets: [{
 //             label: 'My First dataset',
-//             backgroundColor: ['rgb(237, 125, 49)', "rgb(0, 85, 255)"],
+//             backgroundColor: ['rgb(53, 155, 189)', "rgb(246, 197, 45)"],
 //             data: [3, 10]
 //         }]
 //     },
 //     options: {}
 // });
 
-// var secChart05 = document.getElementById('sec-05-chart').getContext('2d');
-// var chart = new Chart(secChart05, {
-//     type: 'pie',
-//     data: {
-//         labels: ['여성', '남성'],
-//         datasets: [{
-//             label: 'My First dataset',
-//             backgroundColor: ['rgb(237, 125, 49)', "rgb(0, 85, 255)"],
-//             data: [3, 10]
-//         }]
-//     },
-//     options: {}
-// });
+var labelArray = ["경제", "사회","생활문화","세계","연예","정치","IT 과학"],
+    positiveData0501 = [55, 82, 24,24,54,34,12];
+var secChart0501 = document.getElementById('sec-05-chart-01').getContext('2d');
+var chart = new Chart(secChart0501, {
+  type: 'pie',
+  data: {
+    labels: labelArray,
+    datasets: [{
+        label: '여성 %',
+        data: positiveData0501,
+        backgroundColor: ['rgb(246, 196, 45)',"rgb(245, 147, 37)","rgb(134, 223, 243)","rgb(66, 120, 183)","rgb(54, 99, 142)","rgb(59, 126, 130)","rgb(145, 193, 34)"]
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      fontSize:30,
+      fontColor:"#333333",
+      margin: 30,
+      text: '여성'
+  },
+    plugins: {
+      datalabels: {
+        color: 'white',
+        font: {
+          weight: 'bold'
+        },
+        formatter: function(value, context) {
+          return Math.round(value) + '%';
+        }
+      }
+    }
+  }
+});
+var labelArray = ["경제", "사회","생활문화","세계","연예","정치","IT 과학"],
+    positiveData0502 = [55, 82, 24,24,54,34,12];
+var secChart0502 = document.getElementById('sec-05-chart-02').getContext('2d');
+var chart = new Chart(secChart0502, {
+  type: 'pie',
+  data: {
+    labels: labelArray,
+    datasets: [{
+        label: '남성 %',
+        data: positiveData0502,
+        backgroundColor: ['rgb(246, 196, 45)',"rgb(245, 147, 37)","rgb(134, 223, 243)","rgb(66, 120, 183)","rgb(54, 99, 142)","rgb(59, 126, 130)","rgb(145, 193, 34)"]
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      fontSize:30,
+      fontColor:"#333333",
+      margin: 10,
+      text: '남성'
+  },
+    plugins: {
+      datalabels: {
+        color: 'white',
+        font: {
+          weight: 'bold'
+        },
+        formatter: function(value, context) {
+          return Math.round(value) + '%';
+        }
+      }
+    }
+  }
+});
 
-
-var labelArray = ["정치", "과학","문화","경제","사회"],
-    positiveData01 = [55, 82, 24, 24,54],
-    negativeData01 = [27, 10, 56,43,12];
+var labelArray = ["경제", "사회","생활문화","세계","연예","정치","IT 과학"],
+    positiveData01 = [55, 82, 24,24,54,34,12],
+    negativeData01 = [27, 10, 56,43,12,77,33];
 var secChart06 = document.getElementById('sec-06-chart').getContext('2d');
 var chart = new Chart(secChart06, {
-  type: 'bar',
+  type: 'horizontalBar',
   data: {
     labels: labelArray,
     datasets: [{
         label: '긍정적 %',
         data: positiveData01,
-        backgroundColor: 'rgb(0, 85, 255)',
-        borderColor: 'rgb(0, 85, 255)',
+        backgroundColor: 'rgb(246, 197, 45)',
+        borderColor: 'rgb(246, 197, 45)',
       },
       {
         label: '부정적 %',
         data: negativeData01,
-        backgroundColor: 'rgb(237, 125, 49)',
-        borderColor: 'rgb(237, 125, 49)',
+        backgroundColor: 'rgb(53, 155, 189)',
+        borderColor: 'rgb(53, 155, 189)',
       }
     ]
   },
@@ -130,25 +186,25 @@ var chart = new Chart(secChart06, {
   }
 });
 
-var labelArray = ["정치", "과학","문화","경제","사회"],
-    positiveData02 = [55, 82, 24, 24,54],
-    negativeData02 = [27, 10, 56,43,12];
+var labelArray = ["경제", "사회","생활문화","세계","연예","정치","IT 과학"],
+    positiveData02 = [55, 82, 24,24,54,34,12],
+    negativeData02 = [27, 10, 56,43,12,77,33];
 var secChart07 = document.getElementById('sec-07-chart').getContext('2d');
 var chart = new Chart(secChart07, {
-  type: 'bar',
+  type: 'horizontalBar',
   data: {
     labels: labelArray,
     datasets: [{
         label: '긍정적 %',
         data: positiveData02,
-        backgroundColor: 'rgb(0, 85, 255)',
-        borderColor: 'rgb(0, 85, 255)',
+        backgroundColor: 'rgb(246, 197, 45)',
+        borderColor: 'rgb(246, 197, 45)',
       },
       {
         label: '부정적 %',
         data: negativeData02,
-        backgroundColor: 'rgb(237, 125, 49)',
-        borderColor: 'rgb(237, 125, 49)',
+        backgroundColor: 'rgb(53, 155, 189)',
+        borderColor: 'rgb(53, 155, 189)',
       }
     ]
   },
@@ -183,7 +239,7 @@ var chart = new Chart(secChart08, {
         labels: ['여성', '남성'],
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: ['rgb(237, 125, 49)', "rgb(0, 85, 255)"],
+            backgroundColor: ["rgb(246, 197, 45)",'rgb(53, 155, 189)'],
             data: [3, 10]
         }]
     },
@@ -197,14 +253,14 @@ var chart = new Chart(secChart09, {
         labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
         datasets: [{
             label: '여성',
-            backgroundColor: ['rgb(237, 125, 49)'],
-            borderColor: 'rgb(237, 125, 49)',
+            backgroundColor: ["rgb(246, 197, 45)"],
+            borderColor: "rgb(246, 197, 45)",
             data: [5, 3, 3, 4, 5, 6, 7, 8, 20, 4, 20],
             fill: false
         }, {
             label: '남성',
-            backgroundColor: ["rgb(0, 85, 255)"],
-            borderColor: "rgb(0, 85, 255)",
+            backgroundColor: ['rgb(53, 155, 189)'],
+            borderColor: 'rgb(53, 155, 189)',
             data: [20, 13, 33, 64, 35, 16, 7, 8, 20, 4, 20],
             fill: false
         }]
@@ -219,14 +275,15 @@ var chart = new Chart(secChart10, {
         labels: ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
         datasets: [{
             label: '여성',
-            backgroundColor: ['rgb(237, 125, 49)'],
-            borderColor: 'rgb(237, 125, 49)',
+            backgroundColor: ["rgb(246, 197, 45)"],
+            borderColor: "rgb(246, 197, 45)",
+            
             data: [20, 13, 33, 64, 35, 16, 7, 8, 20, 4, 20],
             fill: false
         }, {
             label: '남성',
-            backgroundColor: ["rgb(0, 85, 255)"],
-            borderColor: "rgb(0, 85, 255)",
+            backgroundColor: ['rgb(53, 155, 189)'],
+            borderColor: 'rgb(53, 155, 189)',
             data: [5, 3, 3, 4, 5, 6, 7, 8, 20, 4, 20],
             fill: false
         }]

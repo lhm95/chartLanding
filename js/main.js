@@ -158,8 +158,8 @@ var chart = new Chart(secChart0502, {
 });
 
 var labelArray = ["경제", "사회","생활문화","세계","연예","정치","IT 과학"],
-    positiveData01 = [55, 82, 24,24,54,34,12],
-    negativeData01 = [27, 10, 56,43,12,77,33];
+    positiveData01 = [55, 82, 24, 24, 54, 34, 12],
+    negativeData01 = [45, 18, 76, 76, 46, 66, 88];
 var secChart06 = document.getElementById('sec-06-chart').getContext('2d');
 var chart = new Chart(secChart06, {
   type: 'horizontalBar',
@@ -203,8 +203,8 @@ var chart = new Chart(secChart06, {
 });
 
 var labelArray = ["경제", "사회","생활문화","세계","연예","정치","IT 과학"],
-    positiveData02 = [55, 82, 24,24,54,34,12],
-    negativeData02 = [27, 10, 56,43,12,77,33];
+  positiveData02 = [55, 82, 24, 24, 54, 34, 12],
+  negativeData02 = [45, 18, 76, 76, 46, 66, 88];
 var secChart07 = document.getElementById('sec-07-chart').getContext('2d');
 var chart = new Chart(secChart07, {
   type: 'horizontalBar',

@@ -24,7 +24,15 @@ var chart = new Chart(secChart0201, {
             data: [3, 10]
         }]
     },
-    options: {}
+    options: {
+      title: {
+        display: true,
+        fontSize:30,
+        fontColor:"#333333",
+        margin: 10,
+        text: '여성'
+    }
+    }
 });
 
 var secChart0202 = document.getElementById('sec-02-chart-02').getContext('2d');
@@ -39,7 +47,15 @@ var chart = new Chart(secChart0202, {
             data: [3, 10]
         }]
     },
-    options: {}
+    options: {
+      title: {
+        display: true,
+        fontSize:30,
+        fontColor:"#333333",
+        margin: 10,
+        text: '남성'
+    }
+    }
 });
 
 // var secChart03 = document.getElementById('sec-03-chart').getContext('2d');
